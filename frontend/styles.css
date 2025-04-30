@@ -1,0 +1,133 @@
+/* Root variables */
+:root {
+  --color-primary-blue: #046cb4;
+  --color-accent-blue: #7ab3db;
+  --color-orange: #f05a28;
+  --color-white: #ffffff;
+  --color-dark-text: #1a1a1a;
+
+  --font-sans: "Helvetica", "Arial", sans-serif;
+
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.5rem; /* 24px */
+  --font-size-xl: 2rem; /* 32px */
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  --radius-md: 8px;
+}
+
+/* Reset some basic styles */
+body,
+h1,
+p,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-dark-text);
+  padding: var(--spacing-md);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-primary-blue);
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  color: var(--color-white);
+  margin-left: var(--spacing-md);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+main h1 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--spacing-md);
+}
+
+main p {
+  font-size: var(--font-size-lg);
+  color: var(--color-accent-blue);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Add this to your styles.css */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: -40px; /* pull up next to logo */
+  margin-right: 2rem;
+}
+
+nav a {
+  color: var(--color-primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--font-size-base);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--color-accent-blue);
+  color: var(--color-white);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.button-group button {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: var(--color-primary-blue);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-primary-blue);
+}
