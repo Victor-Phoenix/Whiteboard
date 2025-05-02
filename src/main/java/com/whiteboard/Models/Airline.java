@@ -5,10 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Embeddable
-@Getter
 @Setter
-public class Flight {
-	private String iataNumber;
-	private String icaoNumber;
-	private String number;
+@Getter
+public class Airline {
+
+	private String iatacode;
+	private String icaoCode;
+	private String name;
+
 }

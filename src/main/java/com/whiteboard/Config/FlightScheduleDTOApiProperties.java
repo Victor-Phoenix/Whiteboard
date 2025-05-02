@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "aviation.api")
-public class FlightApiProperties {
+public class FlightScheduleDTOApiProperties {
 
 	private String key;
 	private String url;

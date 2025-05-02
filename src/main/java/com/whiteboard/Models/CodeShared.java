@@ -7,8 +7,9 @@ import lombok.Setter;
 @Embeddable
 @Getter
 @Setter
-public class Flight {
-	private String iataNumber;
-	private String icaoNumber;
-	private String number;
+public class CodeShared {
+
+	private Airline airline;
+	private Flight flight;
+
 }
