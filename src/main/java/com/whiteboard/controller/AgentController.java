@@ -1,7 +1,7 @@
-package com.whiteboard.Controller;
+package com.whiteboard.controller;
 
-import com.whiteboard.Models.Agent;
-import com.whiteboard.Repositories.AgentRepository;
+import com.whiteboard.models.entities.Agent;
+import com.whiteboard.repositories.AgentRepository;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

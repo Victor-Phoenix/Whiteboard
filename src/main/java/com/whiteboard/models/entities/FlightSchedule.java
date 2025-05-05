@@ -8,9 +8,15 @@
  * 
  */
 
-package com.whiteboard.Models;
+package com.whiteboard.models.entities;
 
 import java.util.Set;
+
+import com.whiteboard.models.embeddables.Airline;
+import com.whiteboard.models.embeddables.Arrival;
+import com.whiteboard.models.embeddables.CodeShared;
+import com.whiteboard.models.embeddables.Departure;
+import com.whiteboard.models.embeddables.Flight;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -26,7 +32,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class FlightScheduleDTO {
+public class FlightSchedule{
 
 	//TODO get info from aviation edge
 	
@@ -44,8 +50,9 @@ public class FlightScheduleDTO {
 	private Departure departure;
 	@Embedded
 	private Flight flight; // or rename to avoid conflict
-		private String status;
-		private String type;
+
+	private String status;
+	private String type;
 
 
     @ManyToMany(mappedBy = "assignedToFlights")

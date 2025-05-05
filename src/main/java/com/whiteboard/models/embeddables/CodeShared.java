@@ -1,4 +1,4 @@
-package com.whiteboard.Models;
+package com.whiteboard.models.embeddables;
 
 import jakarta.persistence.Embeddable;
 import lombok.Getter;

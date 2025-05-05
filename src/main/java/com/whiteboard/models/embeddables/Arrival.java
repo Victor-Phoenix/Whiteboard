@@ -1,14 +1,13 @@
-package com.whiteboard.Models;
+package com.whiteboard.models.embeddables;
 
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Embeddable
-@Getter
 @Setter
-
-public class Departure {
+@Getter
+public class Arrival {
 
 	private String actualRunway;
 	private String actualTime;
@@ -21,5 +20,5 @@ public class Departure {
 	private String icaoCode;
 	private String scheduledTime;
 	private String terminal;
-
+	
 }

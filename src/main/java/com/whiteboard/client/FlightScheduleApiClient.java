@@ -1,4 +1,4 @@
-package com.whiteboard.Client;
+package com.whiteboard.client;
 
 
 import java.util.Arrays;
@@ -9,28 +9,30 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.whiteboard.Config.FlightApiProperties;
-
+import com.whiteboard.config.FlightScheduleApiProperties;
+//Does all the apis calls	
 
 @Component
-public class FlightScheduleDTOApiClient {
+public class FlightScheduleApiClient {
+
 
 	private final RestTemplate restTemplate;
-	private final FlightApiProperties apiProps;
+	private final FlightScheduleApiProperties apiProps;
 
 	@Autowired
-	public FlightScheduleDTOApiClient(RestTemplate restTemplate, FlightApiProperties apiProps) {
+	public FlightScheduleApiClient(RestTemplate restTemplate,
+			FlightScheduleApiProperties apiProps) {
 
 		this.restTemplate = restTemplate;
 		this.apiProps = apiProps;
 
 	}
 
-	public List<Object> getTimetable(String iataCode, String type) {
-		String paramKey = type.equalsIgnoreCase("arrival") ? "arrIata" : "depIata";
+	//
+	public List<Object> getArrival(String iataCode, String type) {
 		String endpoint = "/timetable";
-		String url = apiProps.getUrl() + endpoint + "?key=" + apiProps.getKey() + "&" + paramKey
-				+ "=" + iataCode;
+		String url = apiProps.getUrl() + endpoint + "?key=" + apiProps.getKey() + "&" + "="
+				+ iataCode;
 
 		System.out.println("Calling URL: " + url);
 		ResponseEntity<Object[]> response = restTemplate.getForEntity(url, Object[].class);

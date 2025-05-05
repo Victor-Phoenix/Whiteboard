@@ -1,11 +1,11 @@
-package com.whiteboard.Config;
+package com.whiteboard.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "aviation.api")
-public class FlightScheduleDTOApiProperties {
+public class FlightScheduleApiProperties {
 
 	private String key;
 	private String url;
