@@ -1,5 +1,12 @@
 package com.whiteboard.dtos;
 
-public class FlightDTO {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class FlightDTO {
+	private String iataNumber;
+	private String icaoNumber;
+	private String number;
 }

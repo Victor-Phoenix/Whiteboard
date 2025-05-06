@@ -1,63 +1,48 @@
-/*
- *  Flight.java
- *  
- *  Summary: This java class is a model that will represent the flights in our project. Each 
- *  Flight will be its on entity, stored on our prostgreSQL database, so we can create the 
- *  schedule for the day of (maybe before and after) work. 
- * 	Methods:
- * 
- */
-
 package com.whiteboard.models.entities;
 
-import java.util.Set;
-
-import com.whiteboard.models.embeddables.Airline;
-import com.whiteboard.models.embeddables.Arrival;
-import com.whiteboard.models.embeddables.CodeShared;
-import com.whiteboard.models.embeddables.Departure;
-import com.whiteboard.models.embeddables.Flight;
-
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table
 @Entity
+@Table
 @Getter
 @Setter
-public class FlightSchedule{
+public class FlightSchedule {
 
-	//TODO get info from aviation edge
-	
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	@Embedded
-		private Airline airline;
-	@Embedded
-		private Arrival arrival;
-	@Embedded
-	private CodeShared codeShare;
-	@Embedded
-	private Departure departure;
-	@Embedded
-	private Flight flight; // or rename to avoid conflict
+	// Airline Info
+	private String airlineName;
+	private String airlineIataCode;
+	private String airlineIcaoCode;
 
-	private String status;
-	private String type;
+	// Arrival Info
+	private String arrivalGate;
+	private String arrivalTerminal;
+	private String arrivalIataCode;
+	private String arrivalIcaoCode;
+	private String arrivalScheduledTime;
 
+	// Departure Info
+	private String departureGate;
+	private String departureTerminal;
+	private String departureIataCode;
+	private String departureIcaoCode;
+	private String departureScheduledTime;
 
-    @ManyToMany(mappedBy = "assignedToFlights")
-    private Set<Agent> assignedAgents;
+	// Flight Info
+	private String flightNumber;
+	private String flightIataNumber;
+	private String flightIcaoNumber;
 
-
-    
+	// Status / Type
+	private String status; // landed, scheduled, cancelled, etc.
+	private String type; // arrival or departure
 }

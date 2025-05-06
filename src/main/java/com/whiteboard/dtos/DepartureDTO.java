@@ -1,14 +1,12 @@
-package com.whiteboard.models.embeddables;
+package com.whiteboard.dtos;
 
-import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
 
-@Embeddable
 @Getter
 @Setter
 
-public class Departure {
+public class DepartureDTO {
 
 	private String actualRunway;
 	private String actualTime;
