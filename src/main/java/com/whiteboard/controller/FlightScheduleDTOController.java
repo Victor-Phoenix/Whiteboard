@@ -12,7 +12,7 @@ import com.whiteboard.repositories.FlightScheduleRepository;
 import com.whiteboard.service.FlightScheduleService;
 
 @RestController
-@RequestMapping("/flight")
+
 public class FlightScheduleDTOController {
 
 	@Autowired
@@ -21,10 +21,20 @@ public class FlightScheduleDTOController {
 	FlightScheduleService flightService;
 
 	// This is used to populate information onto the "Whiteboard"
-	@GetMapping("/timetable")
-	public List<Object> getTimetable(@RequestParam String iataCode, @RequestParam String type) {
-		System.out.println(">>> Controller HIT");
-		return flightService.getTimetable(iataCode, type);
+	@GetMapping("/getArrival")
+	public List<Object> getArrival() {
+	    String iataCode = "YXY"; // hardcoded for now
+	    String type = "arrival"; // or "departure" depending on your service
+	    System.out.println(">>> Controller HIT");
+	    return flightService.getArrival(iataCode);
 	}
-
+	
+	
+//	@GetMapping("/getDeparture")
+//	public List<DepartureDTO> getDepartures() { }
+//
+//	@GetMapping("/getSchedule")
+//	public List<FlightScheduleDTO> getSchedule() {
+//	    // combine both
+//	}
 }

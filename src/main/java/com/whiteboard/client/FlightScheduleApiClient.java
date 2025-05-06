@@ -15,7 +15,7 @@ import com.whiteboard.config.FlightScheduleApiProperties;
 @Component
 public class FlightScheduleApiClient {
 
-
+	private final String timetable = "/timetable";
 	private final RestTemplate restTemplate;
 	private final FlightScheduleApiProperties apiProps;
 
@@ -29,11 +29,11 @@ public class FlightScheduleApiClient {
 	}
 
 	//
-	public List<Object> getArrival(String iataCode, String type) {
-		String endpoint = "/timetable";
-		String url = apiProps.getUrl() + endpoint + "?key=" + apiProps.getKey() + "&" + "="
-				+ iataCode;
-
+	public List<Object> getArrival(String iataCode) {
+		
+		String url = apiProps.getUrl() + timetable + "?key=" + apiProps.getKey() + "&" +"iataCode"+
+				"="	+ iataCode + "&type=arrival";
+			
 		System.out.println("Calling URL: " + url);
 		ResponseEntity<Object[]> response = restTemplate.getForEntity(url, Object[].class);
 		return Arrays.asList(response.getBody());

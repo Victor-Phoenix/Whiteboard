@@ -20,8 +20,8 @@ public class FlightScheduleService {
 	@Autowired
 	private FlightScheduleRepository flightRepo;
 
-	public List<Object> getTimetable(String iataCode, String type) {
-		return flightApiClient.getTimetable(iataCode, type);
+	public List<Object> getArrival(String iataCode) {
+		return flightApiClient.getArrival(iataCode);
 	}
 
 }
