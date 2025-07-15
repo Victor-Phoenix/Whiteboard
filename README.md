@@ -62,13 +62,12 @@ Although the project was eventually **discontinued due to the cost of using the 
 
 - Implemented basic Spring Security route protection  
 - Learned about login configuration and preparing for secure password hashing with BCrypt  
-- Gained insight into why backend security matters even for internal tools  
 
-### Real-World Development Lessons
+### Manual Testing with Postman
 
-- Faced real-world challenges: project structure confusion, annotation bugs, PostgreSQL setup issues  
-- Learned by doing — not everything worked right away, but those struggles helped me grow  
-- Gained a stronger understanding of backend systems and how to troubleshoot them  
+- Used Postman extensively to test all endpoints and validate behavior before implementing frontend logic  
+- Simulated agent login sessions, tested access control, and verified request/response data formats  
+- Postman also helped uncover bugs in route protection and payload handling, acting as my primary testing tool in the absence of automated test coverage  
 
 ---
 
