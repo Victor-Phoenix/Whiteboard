@@ -2,7 +2,13 @@
 
 ## Overview
 
-Whiteboard is a web-based internal dashboard built for airline agents to track shift assignments and manage flight-related tasks. The app includes agent-to-flight assignments, shift tracking, and real-time displays like a task countdown and current clock. Built with Spring Boot and PostgreSQL, this project was a hands-on learning experience in backend development, database integration, and clean software architecture.
+Whiteboard is a backend-focused internal dashboard built for airline agents to track shift assignments, flight details, and task timers. It was designed as a functional operations tool—allowing agents to be assigned to flights, view upcoming departures, and monitor special instructions and timing.
+
+The backend was developed using **Spring Boot** and **PostgreSQL**, with real-time flight data pulled from the **Aviation Edge API**. After successfully setting up the API connection and receiving valid responses, I began working on the frontend and learning how to connect it to the backend.
+
+This was my first project combining Spring Boot, real-time external data, and a live SQL database. It helped me deeply understand backend architecture, data modeling, security, and service layering.
+
+Although the project was eventually **discontinued due to the cost of using the Aviation Edge API**, it served as a critical milestone in my learning. It taught me how to build a working backend system from scratch, structure a production-level codebase, and integrate a real database and API.
 
 ---
 
